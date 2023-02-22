@@ -10,4 +10,13 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+  color: blue;
+}
+
+.title {
+  color: rgb(32, 111, 12);
+}
+
+.title:hover {
+  color: red;
 }
