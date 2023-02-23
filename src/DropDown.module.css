@@ -1,0 +1,42 @@
+.ddlMultiSelect .ddlSelectMain {
+    width: 100%;
+    height: 26px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+}
+
+.ddlSelectMain {
+    display: flex;
+}
+
+.iconDisplay {
+    width: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+
+.iconDisplay svg{
+    color: #888;
+    font-size: 12px;
+}
+
+.lblMultSelect {
+    width: 635px;
+    display: inline-block;
+    height: 15px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 5px;
+    white-space: nowrap;
+    font-size: 12px;
+}
+
+label {
+    padding: 5px 12px 4px 0;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: bold;
+    color: #333;
+}

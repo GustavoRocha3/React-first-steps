@@ -1,6 +1,6 @@
 function TestEvents() {
     const exibirAviso = () => {
-        alert('Segura a emoção ai chapa!');
+        alert('Eita!');
     };
 
     return (
