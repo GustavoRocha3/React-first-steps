@@ -1,7 +1,6 @@
 .selectDisplay {
-    display: none;
-    position: inherit;
-    left: 56.3%;
+    position: absolute;
+    right: 56.3%;
     height: 253px;
     background-color: #fff;
     border: 1px solid #aaa;

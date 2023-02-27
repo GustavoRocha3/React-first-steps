@@ -1,6 +1,6 @@
 // import React, {useState, useEffect} from "react";
 
-// import styles from "./index.module.css";
+import styles from "./index.module.css";
 
 // import CardTest from "./components/CardTest";
 // import TestEvents from "./components/TestEvents";
@@ -45,7 +45,9 @@ function App() {
           <li key={repositorio.id}>{repositorio.name}</li>
         ))}
         </ul> */}
-      <DropDownTeste lblName="Campos Extras" lblSize="670px"/>
+      <div className={styles.row}>
+        <DropDownTeste lblName="Campos Extras" lblSize="670px"/>
+      </div>
     </>
   );
 }
