@@ -50,6 +50,15 @@ table {
   white-space: nowrap;
 }
 
+table a {
+  display: inline-block;
+}
+
+table a:first-child svg {
+  color: #333;
+  font-size: 14px;
+}
+
 thead {
   display: table-header-group;
   vertical-align: middle;
@@ -71,6 +80,15 @@ table thead tr {
   background-color: #3d464d;
   color: rgb(238,238,238);
   text-align: center;
+}
+
+table tbody tr {
+  border-bottom: 1px solid #dee2e6;
+  background-color: #ececec;
+}
+
+table tbody tr:hover {
+  background-color: rgba(0, 0, 0, .1);
 }
 
 table thead td {

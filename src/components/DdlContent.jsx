@@ -5,12 +5,21 @@ import { FaPlus, FaTrashAlt } from "react-icons/fa";
 
 function DdlContent () {
     const [repositorio, setRepositorio] = useState([]);
+    const [content, setContent] = useState([]);
+
     const reps = useRef(null);
     const values = useRef(null);
-    const [content, setContent] = useState([]);
+
     const trashIcon = <FaTrashAlt/>
     const plusIcon = <FaPlus/>
 
+
+    function deleteRow(index) {
+        const newRows = [...content];
+        newRows.splice(index, 1);
+        setContent(newRows)
+
+    }
 
     useEffect(() => {
         async function carregaRepositorios() {
@@ -22,21 +31,30 @@ function DdlContent () {
         carregaRepositorios();
     }, []);
 
+    
+
     function addTable() {
-        var repSelected = reps.current.value;
-        var valueSelected = values.current.value;
+        const repSelected = reps.current.value;
+        const valueSelected = values.current.value;
 
-        const startRow = `<tr><td>${repSelected}</td><td>${valueSelected}</td><td>`
-        const endRow = '<FaTrashAlt /></td></tr>'
-        var newRow = startRow + endRow;
+        const newRow = (<tr>
+                            <td>{repSelected}</td>
+                            <td>{valueSelected}</td>
+                            <td style={{display: "flex", justifyContent: "center"}}><a href="#" onClick={deleteRow(this)}>{trashIcon}</a></td>
+                        </tr>)
 
-        if (content == []){
-            setContent(newRow);
+        // Limpa o campo de valor
+        values.current.value = "";
+
+        if (content === []){
+            return setContent(newRow);
         } else {
-            const found = content.find(element => element == newRow);
+            
 
-            if (found == undefined) {
-                setContent([...content, newRow]);
+            const found = content.find(element => element === newRow);
+
+            if (found === undefined) {
+                return setContent([...content, newRow]);
             }
         }
     }
@@ -75,8 +93,8 @@ function DdlContent () {
                                 <td style={{width: "40px"}}></td>
                             </tr>
                         </thead>
-                        <tbody dangerouslySetInnerHTML={{__html: content}}>
-                           
+                        <tbody>
+                           {content}
                         </tbody>
                     </table>
                 </div>
