@@ -3,12 +3,15 @@ import React, {useState, useEffect, useRef} from "react";
 import styles from "../index.module.css";
 import { FaPlus, FaTrashAlt } from "react-icons/fa";
 
-function DdlContent () {
+function DdlContent ({ updateLblState }) {
     const [repositorio, setRepositorio] = useState([]);
     const [content, setContent] = useState([]);
+    const [resumeState, setResumeState] = useState('');
+    const [pokemon, setPokemon] = useState([]);
 
     const reps = useRef(null);
     const values = useRef(null);
+    const poks = useRef(null);
 
     const trashIcon = <FaTrashAlt/>
     const plusIcon = <FaPlus/>
@@ -22,21 +25,36 @@ function DdlContent () {
     }
 
     useEffect(() => {
+        async function carregaPokemons() {
+        const pokemonReq = await fetch("https://pokeapi.co/api/v2/pokemon?limit=1000&offset=0.")
+
+        const pokemons = await pokemonReq.json();
+        setPokemon(pokemons.results);
+        };
+
         async function carregaRepositorios() {
         const resposta = await fetch("https://api.github.com/users/GustavoRocha3/repos");
 
         const repositorios = await resposta.json();
         setRepositorio(repositorios);
-        }
+        };
+
         carregaRepositorios();
+        carregaPokemons();
     }, []);
 
-    
+    function addResume() {
+        const lblResume = 'teste';
+        setResumeState(lblResume);
+        updateLblState(lblResume);
+    }
 
     function addTable() {
         const repSelected = reps.current.value;
         const valueSelected = values.current.value;
 
+        const pokemonSelected = poks.current.value;
+        
         const newRow = (<tr>
                             <td>{repSelected}</td>
                             <td>{valueSelected}</td>
@@ -46,14 +64,15 @@ function DdlContent () {
         // Limpa o campo de valor
         values.current.value = "";
 
-        if (content === []){
+        if (content.length == 0){
+            addResume();
             return setContent(newRow);
-        } else {
-            
 
+        } else {
             const found = content.find(element => element === newRow);
 
             if (found === undefined) {
+                addResume();
                 return setContent([...content, newRow]);
             }
         }
@@ -67,6 +86,14 @@ function DdlContent () {
                     <select ref={reps}>
                     {repositorio.map((repositorio) => (
                         <option key={repositorio.id}>{repositorio.name}</option>
+                    ))}
+                    </select>
+                </div>
+                <div className={styles.col}>
+                    <label>Pokemons</label>
+                    <select ref={poks}>
+                    {pokemon.map((pokemon) => (
+                        <option key={pokemon.url}>{pokemon.name}</option>
                     ))}
                     </select>
                 </div>

@@ -48,6 +48,11 @@ function App() {
       <div className={styles.row}>
         <DropDownTeste lblName="Campos Extras" lblSize="670px"/>
       </div>
+
+      <details>
+        <summary>Clique Aqui</summary>
+        <p>teste</p>
+      </details>
     </>
   );
 }
