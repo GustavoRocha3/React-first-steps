@@ -1,4 +1,5 @@
-import cardStyles from '../css/card.module.css'
+import cardStyles from '../css/card.module.css';
+import unknown from '../img/unknown.png';
 
 function PokeCard(props) {
     const { name, info } = props;
@@ -13,20 +14,24 @@ function PokeCard(props) {
 
     return (
         <>
-            <div className={cardStyles.card}>
             {name.length !== 0 ? (
                 <>
+                <div className={cardStyles.card}>
+
                     <div className={cardStyles.headerCard}>
                         <span>{info.name}</span>
                     </div>
                     <div className={cardStyles.contentCard}>
                         <div className={cardStyles.contentCardImage}>
-                            <img src={info.img} alt='imagem do pokemon' />
-                            <div className={cardStyles.types}>
-                                {info.types.map((type) => (
-                                    <p>{type}</p>
-                                ))}
+                            <div className={cardStyles.imageAndType}>
+                                <img src={info.img} alt='imagem do pokemon' />
+                                <div className={cardStyles.types}>
+                                    {info.types.map((type) => (
+                                        <p>{type}</p>
+                                    ))}
+                                </div>
                             </div>
+                            
                             <div className={cardStyles.stats}>
                                 <p>Altura: {calcHeight(info.height)} metros</p>
                                 <p>Peso: {calcWeight(info.weight)} Kgs</p>
@@ -36,24 +41,33 @@ function PokeCard(props) {
                         <div className={cardStyles.moves}>
                             <div>
                                 {info.moves.slice(0, 2).map((move, index) => (
-                                    <p key={index}>{move.move.name}</p>
+                                    <div>
+                                        <p key={index}>{move.move.name}</p>
+                                    </div>
                                 ))}
                             </div>
                             <div>
                                 {info.moves.slice(2, 4).map((move, index) => (
-                                    <p key={index}>{move.move.name}</p>
+                                    <div>
+                                        <p key={index}>{move.move.name}</p>
+                                    </div>
                                 ))}
                             </div>
                         </div>
                     </div>
+            </div>
+
                 </>
             ) : (
-                <div>
-                {/* Código a ser renderizado quando image.length for igual a zero */}
-                <p>Selecione um pokemon e ele aparecerá aqui</p>
-                </div>
+                <>
+                    <div className={cardStyles.unknown}>
+                        {/* Código a ser renderizado quando name.length for igual a zero */}
+                        <p>Selecione um pokemon e ele aparecerá aqui</p>
+                        <img src={unknown} alt="" />
+                    </div>
+                </>
+                
             )}
-            </div>
         </>
     );
 }

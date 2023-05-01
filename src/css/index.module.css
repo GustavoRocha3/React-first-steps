@@ -44,6 +44,11 @@ button {
   cursor: pointer;
   border-radius: 2px;
   background-color: #cd1111;
+  width: fit-content;
+}
+
+button:hover {
+  opacity: 0.8;
 }
 
 .selectPokemon, .selectType {
@@ -59,13 +64,19 @@ button {
 .divPokemons {
   display: flex;
   width: 100%;
-  justify-content: space-between;
+  justify-content: space-evenly;
   height: 300px;
 }
 
 .container {
   margin: 0 10px;
   min-height: 83vh;
+}
+
+.selectSection {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
 }
 
 table {
@@ -198,6 +209,8 @@ h1 {
 .col5 {
   width: 41.66%;
 }
+
+
 
 .footer {
   height: 10px;

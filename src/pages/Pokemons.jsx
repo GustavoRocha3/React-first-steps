@@ -101,21 +101,25 @@ import styles from "../css/index.module.css";
       <div className={styles.container}>
          <h1>Pokemons</h1>
          <div className={styles.divPokemons}>
-            <div className={styles.col5}>
-               <label>Selecione um Tipo de Pokemon</label>   
-               <select className={styles.selectType} value={typeSelected} onChange={changeType} ref={poksTypes}>
-                  <option value='none'>Selecione um tipo de pokemon</option>
-                  {pokeTypes.map((types) => (
-                      <option key={types.name} value={types.url}>{types.name}</option>
-                  ))}
-               </select>
-               <label>Selecione um Pokemon</label>
-               <select className={styles.selectPokemon} value={pokemonSelected} onChange={changePokemon} ref={poks}>
-                     <option>Selecione um Pokemon</option>
-                  {pokemon.map((pokemon) => (
-                     <option key={pokemon.pokemon.name} value={pokemon.pokemon.url}>{pokemon.pokemon.name}</option>
-                  ))}
-               </select>
+            <div className={styles.selectSection}>
+               <div>
+                  <label>Selecione um Tipo de Pokemon</label>   
+                  <select className={styles.selectType} value={typeSelected} onChange={changeType} ref={poksTypes}>
+                     <option value='none'>Selecione um tipo de pokemon</option>
+                     {pokeTypes.map((types) => (
+                        <option key={types.name} value={types.url}>{types.name}</option>
+                     ))}
+                  </select>
+               </div>
+               <div>
+                  <label>Selecione um Pokemon</label>
+                  <select className={styles.selectPokemon} value={pokemonSelected} onChange={changePokemon} ref={poks}>
+                        <option value='none'>Selecione um Pokemon</option>
+                     {pokemon.map((pokemon) => (
+                        <option key={pokemon.pokemon.name} value={pokemon.pokemon.url}>{pokemon.pokemon.name}</option>
+                     ))}
+                  </select>
+               </div>
                <button onClick={selectPokemon}>Selecione</button>
 
             </div>

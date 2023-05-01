@@ -36,7 +36,7 @@
 }
 
 .contentCardImage img {
-    width: 45%;
+    width: 60%;
 }
 
 .stats {
@@ -50,12 +50,16 @@
     display: flex;
     justify-content: center;
     width: 100%;
+    background-color: #cd1111;
+    color: white;
+    border-radius: 0 0 9px 9px;
 }
 
 .types p {
     text-transform: capitalize;
     padding: 0 10px;
     font-weight: 700;
+    
 }
 
 .moves {
@@ -75,6 +79,33 @@
     align-items: center;
     height: 50%;
     padding: 5px;
+    width: 100%;
+}
+
+.moves div p {
+    text-transform: capitalize;
+}
+
+.unknown {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.unknown p {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.imageAndType {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #feca1b;
+    border-radius: 9px;
+    background: #fff;
 }
 
 p, h4 {

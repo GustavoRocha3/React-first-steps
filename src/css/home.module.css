@@ -26,11 +26,16 @@
 
 .btn a {
     background-color: #d90404;
-    width: 70px;
-    padding: 5px 10px;
+    width: auto;
+    padding: 10px 25px;
     border-radius: 5px;
     text-decoration: none;
     color: #fff;
+    font-size: 22px;
+}
+
+.btn a:hover {
+    opacity: 0.8;
 }
 
 .contentHomeTitle h1 {

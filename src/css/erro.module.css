@@ -1,0 +1,29 @@
+.contentErro {
+    display: flex;
+    justify-content: space-around;
+}
+
+.contentErro img {
+    width: 50%;
+}
+
+.contentErro > div {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    justify-content: center;
+}
+
+.btn a {
+    background-color: #d90404;
+    width: auto;
+    padding: 10px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 22px;
+}
+
+.btn a:hover {
+    opacity: 0.8;
+}

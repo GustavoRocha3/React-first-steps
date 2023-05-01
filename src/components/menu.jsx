@@ -8,7 +8,9 @@ import pokeball from '../img/pokebola.png'
 const Menu = () => {
     return (
         <nav className={stylesMenu.menu}>
-            <img src={pokeball} alt="Pokebola imagem" />
+            <Link to="/">
+                <img src={pokeball} alt="Pokebola imagem" />
+            </Link>
             <div className={stylesMenu.menuItems}>
                 <Link className={stylesMenu.hoverLine} to="/">Home</Link>
                 <Link className={stylesMenu.hoverLine} to="/login">Login</Link>
