@@ -1,0 +1,43 @@
+.imgLogo {
+    width: 30%;
+}
+
+.logoContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+}
+
+.contentHome {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 25px;
+}
+
+.contentHomeTitle {
+    width: 375px;
+}
+
+.btn { 
+    display: flex;
+    justify-content: flex-start;
+}
+
+.btn a {
+    background-color: #d90404;
+    width: 70px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.contentHomeTitle h1 {
+    font-size: 50px;
+    color: #3761a8;
+}
+
+.contentHomeTitle span {
+    color: #feca1b;
+}

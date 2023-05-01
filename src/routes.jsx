@@ -2,7 +2,7 @@ import { Routes, Route } from "react-router-dom"
 
 import Home from "./pages/Home";
 import Login from "./pages/Login";
-import Profile from "./pages/Profile";
+import Pokemons from "./pages/Pokemons";
 import Error from "./pages/Error";
 
 const AppRoutes = () => {
@@ -11,7 +11,7 @@ const AppRoutes = () => {
             <Route path="*" element={<Error/>}/>
             <Route path="/" element={<Home/>}/>
             <Route path="login/:slug" element={<Login/>}/>
-            <Route path="profile" element={<Profile/>}/>
+            <Route path="pokemons" element={<Pokemons/>}/>
         </Routes>
     );
 };

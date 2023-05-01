@@ -1,0 +1,52 @@
+.menu {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    background-color: #feca1b;
+    padding: 10px 0;
+}
+
+.menu img {
+    width: 120px;
+    padding-right: 50px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.menuItems {
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+}
+
+a:hover {
+    color: #3761a8;
+}
+
+ /* EFEITO DE HOVER NO LINK */
+ .hoverLine {
+    position: relative;
+    padding-bottom: 2px;
+  }
+  
+  .hoverLine:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #3761a8;
+    transition: width 0.3s ease-in-out;
+  }
+  
+  .hoverLine:hover:after {
+    width: 100%;
+  }
+  /* EFEITO DE HOVER NO LINK */

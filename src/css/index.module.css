@@ -5,7 +5,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  padding-left: 10px;
+  /* padding-left: 10px; */
+  background-color: #fef9e7;
 }
 
 code {
@@ -39,9 +40,32 @@ button {
   padding: 10px;
   color: white;
   font-weight: bold;
-  font-size: 12px !important;
+  font-size: 12px;
   cursor: pointer;
   border-radius: 2px;
+  background-color: #cd1111;
+}
+
+.selectPokemon, .selectType {
+  margin-bottom: 10px;
+}
+
+.imgPokemon {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.divPokemons {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  height: 300px;
+}
+
+.container {
+  margin: 0 10px;
+  min-height: 83vh;
 }
 
 table {
@@ -100,6 +124,10 @@ table thead td {
 
 table td, table th {
   padding: 0.1rem 0.4rem 0.1rem 0.4rem;
+}
+
+h1 {
+  margin: 25px 0;
 }
 
 .dvTable {
@@ -169,4 +197,16 @@ table td, table th {
 
 .col5 {
   width: 41.66%;
+}
+
+.footer {
+  height: 10px;
+  width: 100%;
+  background-color: #feca1b;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }

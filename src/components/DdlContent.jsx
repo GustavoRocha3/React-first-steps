@@ -1,6 +1,6 @@
 import React, {useState, useEffect, useRef} from "react";
 
-import styles from "../index.module.css";
+import styles from "../css/index.module.css";
 import { FaPlus, FaTrashAlt } from "react-icons/fa";
 
 function DdlContent ({ updateLblState }) {
@@ -46,7 +46,7 @@ function DdlContent ({ updateLblState }) {
     function addResume() {
         const lblResume = 'teste';
         setResumeState(lblResume);
-        updateLblState(lblResume);
+        //updateLblState(lblResume);
     }
 
     function addTable() {

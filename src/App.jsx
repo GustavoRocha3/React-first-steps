@@ -1,12 +1,13 @@
 // import React, {useState, useEffect} from "react";
 
-import styles from "./index.module.css";
+//import styles from "./index.module.css";
 
 // import CardTest from "./components/CardTest";
 // import TestEvents from "./components/TestEvents";
 // import ChangeCar from "./components/ChangeCar";
-import Menu from "./components/menu";
-import DropDownTeste from "./components/DropDownTeste";
+// import Menu from "./components/menu";
+// import Footer from "./components/footer"
+//import DropDownTeste from "./components/DropDownTeste";
 
 
 function App() {
@@ -26,7 +27,7 @@ function App() {
 
   return (
     <>
-      <Menu/>
+      {/* <Menu/> */}
       {/* <h1 className={styles.title}>Sou um título</h1>
       <p>Minha cor favoria é {color}</p>
       <CardTest title="Teste1"/>
@@ -45,14 +46,16 @@ function App() {
           <li key={repositorio.id}>{repositorio.name}</li>
         ))}
         </ul> */}
-      <div className={styles.row}>
+      {/* <div className={styles.row}>
         <DropDownTeste lblName="Campos Extras" lblSize="670px"/>
-      </div>
+      </div> */}
 
-      <details>
+      {/* <details>
         <summary>Clique Aqui</summary>
         <p>teste</p>
-      </details>
+      </details> */}
+      {/* <Footer/> */}
+
     </>
   );
 }
